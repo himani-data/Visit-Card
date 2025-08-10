@@ -60,4 +60,4 @@ This project includes:
 
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/yourusername/digital-visiting-card.git
+   git clone https://github.com/himani-data/Visit-Card.git
