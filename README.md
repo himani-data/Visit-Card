@@ -1,7 +1,7 @@
 # Digital Visiting Card
 
-![Visiting Card Banner](https://user-images.githubusercontent.com/yourusername/yourimage.png)  
-*Your personal digital identity on the web*
+![Visiting Card Banner](page.png)  
+*MY personal digital identity on the web*
 
 ---
 
