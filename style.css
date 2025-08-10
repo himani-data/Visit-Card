@@ -37,6 +37,8 @@ display: flex;
      background-size: cover;
     justify-content: center;
     align-items: center;
+        transition: transform 0.8s ease;
+
     /* height: 100vh; */
 }
 
@@ -63,7 +65,7 @@ display: flex;
     transform: rotateY(180deg);
 } */
 
-.card:hover .card-inner {
+.card:hover {
    color: aliceblue;
    transform: scale(1.2) translateY(-2px);
 }
