@@ -1,48 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
 
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #2ed7cf, #f39db8,purple);
-    display: flex;
+    background: linear-gradient(135deg, #2ed7cf, #f39db8, purple);
+     background-size: 100% 100%;
+    background-attachment: fixed;
+
+display: flex;
+     background-size: cover;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */}
+
+.card-container {
+    perspective: 1000px;
 }
 
 .card {
-    width: 320px;
-    padding: 25px;
+    width: 360px;
+        padding: 25px;
     border-radius: 20px;
     text-align: center;
+        /* position: relative; */
+    height: 460px;
+    position: relative;
+    display: flex;
+     background-size: cover;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    /* cursor: pointer; */
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* .card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+} */
+
+.card:hover .card-inner {
+   color: aliceblue;
+   transform: scale(1.2) translateY(-2px);
+}
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+/* FRONT */
+.card-front {
+    /* background: linear-gradient(135deg, #6e8efb, #a777e3); */
+    color: white;
+    padding: 25px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+/* BACK */
+.card-back {
+    transform: rotateY(180deg);
+    gap: 20px;
+    font-size: 28px;
+}
+
+
+/* Flip Button */
+.flip-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255,255,255,0.3);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s;
+}
+.flip-btn:hover {
+    background: rgba(255,255,255,0.5);
+}
+/* Profile Pic */
 .profile-pic {
-    width: 110px;
-    height: 110px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-
-    /* border: 4px solid rgba(255, 255, 255, 0.8); */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.2); */
     transition: transform 0.3s ease;
-    object-fit: contain; 
 }
 
 .profile-pic:hover {
     transform: scale(1.05);
+    
 }
 
 .domain {
@@ -52,6 +146,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* Social Icons */
 .social-icons {
     margin-bottom: 20px;
 }
@@ -59,16 +154,17 @@ body {
 .social-icons a {
     margin: 0 10px;
     text-decoration: none;
-    color:#ff4e70;
+    color:aliceblue;
     font-size: 22px;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
-    color:silver;
+    color:brown;
 }
 
+/* Connect Button */
 .connect-btn {
     display: inline-block;
     padding: 10px 25px;
@@ -80,9 +176,59 @@ body {
     letter-spacing: 0.5px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: background 0.3s ease, transform 0.3s ease;
+    margin-bottom: 40px;
 }
 
 .connect-btn:hover {
     background: linear-gradient(45deg, #ff4e70, #ff758c);
     transform: scale(1.05);
+}
+.Qrcode{
+    /* display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: cent1er; */
+        object-fit: contain;
+        height:40%;
+        width: auto;
+        padding: 10px;
+
+    
+    margin-top: 5px;
+
+    
+}
+.Qrcode:hover{
+    background: linear-gradient(45deg, #ff4e70, #ff758c);
+
+}
+
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.contact-row a {
+    color:mediumpurple;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.contact-row a:hover {
+    color:#ff4e70;
+    transform: scale(1.2);
+        transform: scale(1.2) translateY(-5px); /* Moves icon 5px upwards */
+
+}
+
+.underline {
+    width:100%;               /* length of the line */
+    height: 2px; 
+                  /* thickness */
+    backdrop-filter: blur(5px);
+    background-color:#fff; /* line color */
+    margin: 5px auto 20px;    /* spacing above and below, centered */
+    border-radius: 2px;        /* rounded edges */
 }
