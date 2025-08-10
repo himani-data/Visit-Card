@@ -49,11 +49,10 @@ This project includes:
 
 ## 📸 Screenshot
 
-![Front Side of Card](https://user-images.githubusercontent.com/yourusername/front.png)  
-*Front view with contact info and social media icons*
+![Front Side of Card](f.png)  
 
-![Back Side of Card](https://user-images.githubusercontent.com/yourusername/back.png)  
-*Back view with portfolio link and additional details*
+![Back Side of Card](back.png)  
+
 
 ---
 
